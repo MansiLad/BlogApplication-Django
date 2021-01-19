@@ -77,9 +77,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'DRIVER': 'ODBC Driver 17 for SQL Server'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blogdata',
+        'USER': 'Mansi@mnmmyblog',
+        'PASSWORD': 'MNMistry@7620',
+        'HOST': 'mnmmyblog.mysql.database.azure.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'ssl': {'ssl-ca': '/var/www/html/BaltimoreCyberTrustRoot.crt.pem'}
+        }
     }
 }
 
